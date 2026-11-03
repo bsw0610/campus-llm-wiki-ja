@@ -1,0 +1,36 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    # テンプレートから作った自分の Vault では、push では動かさない
+    # （個人の資料に対する点検は手元で行う。必要なら Actions タブから手動で実行できる）
+    if: github.event_name != 'push' || github.event.repository.is_template
+    # ubuntu-latest (26.04) には Python 3.9 がない。README の対応範囲に合わせて固定する
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.9', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit tests
+        working-directory: 90 System
+        run: python3 -m unittest discover -s tests
+      - name: Lint
+        run: python3 "90 System/scripts/wiki_lint.py" lint --root .
+      - name: Health
+        run: python3 "90 System/scripts/wiki_lint.py" health --root .
+      - name: Evidence
+        run: python3 "90 System/scripts/wiki_lint.py" evidence --root .

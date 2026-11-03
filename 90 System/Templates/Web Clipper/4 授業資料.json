@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "授業資料",
+  "behavior": "create",
+  "noteNameFormat": "{{title|safe_name}}",
+  "path": "00 Inbox/Clips",
+  "noteContentFormat": "# {{title}}\n\n## Raw content\n\n{{content}}",
+  "properties": [
+    {
+      "name": "資料の種類",
+      "value": "授業",
+      "type": "text"
+    },
+    {
+      "name": "科目",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "Why I saved this",
+      "value": "デフォルト適用: 該当科目の理解と試験対策に活用する。",
+      "type": "text"
+    },
+    {
+      "name": "My initial thoughts",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "URL",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "Author",
+      "value": "{{author}}",
+      "type": "text"
+    },
+    {
+      "name": "Published",
+      "value": "{{published}}",
+      "type": "text"
+    },
+    {
+      "name": "Captured",
+      "value": "{{date}}",
+      "type": "text"
+    },
+    {
+      "name": "処理状態",
+      "value": "未処理",
+      "type": "text"
+    }
+  ],
+  "triggers": []
+}

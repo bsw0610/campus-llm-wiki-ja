@@ -1,0 +1,8 @@
+/* 普段は直接開かないフォルダを、ファイルエクスプローラーでだけ隠す。ファイルの場所・リンク・検索・クイックスイッチャーはそのまま。
+   元に戻すには: 設定 → 外観 → CSSスニペットで hide-system-folders をオフにする。 */
+.nav-folder:has(> .nav-folder-title[data-path="raw"]),
+.nav-folder:has(> .nav-folder-title[data-path="90 System"]),
+.nav-folder:has(> .nav-folder-title[data-path$="/アーカイブ"]),
+.nav-file:has(> .nav-file-title[data-path="CLAUDE.md"]) {
+  display: none;
+}

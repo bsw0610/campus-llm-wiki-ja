@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "deployment_status": "active",
+  "inbox": "00 Inbox/Clips",
+  "legacy_inboxes": [],
+  "wiki": "wiki",
+  "index": "wiki/index.md",
+  "legacy_course_roots": [
+    "05 Courses"
+  ],
+  "legacy_roots": [
+    "05 Courses",
+    "90 System"
+  ],
+  "raw": "raw",
+  "manifest": "raw/manifest.json",
+  "outputs": "outputs",
+  "templates": "90 System/wiki-templates"
+}

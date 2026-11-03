@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "AI・新技術の記事",
+  "behavior": "create",
+  "noteNameFormat": "{{title|safe_name}}",
+  "path": "00 Inbox/Clips",
+  "noteContentFormat": "# {{title}}\n\n## Raw content\n\n{{content}}",
+  "properties": [
+    {
+      "name": "資料の種類",
+      "value": "AI・新技術",
+      "type": "text"
+    },
+    {
+      "name": "Why I saved this",
+      "value": "デフォルト適用: AIなど新技術への関心で保存。就活期間は就活での活用の観点でも整理する。",
+      "type": "text"
+    },
+    {
+      "name": "My initial thoughts",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "URL",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "Author",
+      "value": "{{author}}",
+      "type": "text"
+    },
+    {
+      "name": "Published",
+      "value": "{{published}}",
+      "type": "text"
+    },
+    {
+      "name": "Captured",
+      "value": "{{date}}",
+      "type": "text"
+    },
+    {
+      "name": "処理状態",
+      "value": "未処理",
+      "type": "text"
+    }
+  ],
+  "triggers": []
+}

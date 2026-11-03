@@ -1,0 +1,13 @@
+.DS_Store
+.obsidian/workspace*.json
+.obsidian/graph.json
+.env
+.env.*
+*.pem
+
+# LLM Wiki のキャッシュ・生成物（raw の原文は追跡する）
+__pycache__/
+*.py[cod]
+.cache/
+.pytest_cache/
+outputs/.generated/
